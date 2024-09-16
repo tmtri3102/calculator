@@ -6,107 +6,217 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
-    <style>
-      .advanced{
-        max-width: 200px;
-      }
-      .advanced input {
-        width: 100%;
-        border: none;
-        background-color: antiquewhite;
-        border-radius: 24px;
-        height: 40px;
-        margin-bottom: 16px;
-        text-align: right;
-        font-size: 20px;
-      }
-      table button{
-        width: 100%;
-        padding: 8px 12px;
-        font-size: 24px;
-        border: 0px;
-        cursor: pointer;
-        border-radius: 24px;
-        margin: 4px;
-        
-      }
-      table button:hover {
-        background-color: rgb(236, 210, 175);
-      }
-     
-      #result2 {
-        width: 100%;
-      }
-    </style>
+		<style>
+			.advanced {
+				max-width: 200px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 120px;
+			}
+			.advanced input {
+				width: 100;
+				padding: 4px 12px;
+				border: none;
+				background-color: antiquewhite;
+				border-radius: 24px;
+				height: 40px;
+				margin-bottom: 16px;
+				text-align: right;
+				font-size: 20px;
+			}
+
+			button {
+				width: 100%;
+				padding: 8px 12px;
+				font-size: 24px;
+				border: 0px;
+				cursor: pointer;
+				border-radius: 24px;
+				margin: 4px;
+			}
+			button:hover {
+				background-color: rgb(236, 210, 175);
+			}
+
+			#view {
+				width: 100%;
+			}
+		</style>
 		<title>Trí</title>
 	</head>
 	<body>
-		<!-- BASIC CALC -->
-		<div class="basic">
-			<h1>Basic Calculator</h1>
-			<input
-				type="number"
-				placeholder="1st input..."
-				id="firstAmount"
-			/>
-			<input
-				type="number"
-				placeholder="2nd input..."
-				id="secondAmount"
-			/>
-			<!-- Từng function -->
-			<!-- <button onclick="add()">Addition (+)</button>
-		<button onclick="subtract()">Subtraction (-)</button>
-		<button onclick="multiply()">Multiplication (*)</button>
-		<button onclick="divide()">Division (/)</button> -->
-			<!-- Switch case -->
-			<button onclick="calculate('+')">Addition (+)</button>
-			<button onclick="calculate('-')">Subtraction (-)</button>
-			<button onclick="calculate('*')">Multiplication (*)</button>
-			<button onclick="calculate('/')">Division (/)</button>
-			<p id="result">Result =</p>
-		</div>
-		<!-- ADVANCED CALC -->
 		<div class="advanced">
-			<h1>Advanced Calculator</h1>
-			<!-- Display -->
 			<input
-				type="number"
-				id="result2"
-			/>
-			<form>
-				<table >
-					<tr>
-						<td><button onclick="appendNumber('7')">7</button></td>
-						<td><button onclick="appendNumber('8')">8</button></td>
-						<td><button onclick="appendNumber('9')">9</button></td>
-            <td><button onclick="appendOperator('/')">/</button></td>
-            
-						
-					</tr>
-					<tr>
-						<td><button onclick="appendNumber('4')">4</button></td>
-						<td><button onclick="appendNumber('5')">5</button></td>
-						<td><button onclick="appendNumber('6')">6</button></td>
-            <td><button onclick="appendOperator('*')">*</button></td>
-            
-						
-					</tr>
-					<tr>
-						<td><button onclick="appendNumber('1')">1</button></td>
-						<td><button onclick="appendNumber('2')">2</button></td>
-						<td><button onclick="appendNumber('3')">3</button></td>
-            <td><button onclick="appendOperator('-')">-</button></td>
-            
-						
-					<tr>
-						<td colspan="2"><button onclick="appendNumber('0')">0</button></td>
-						<td><button onclick="appendNumber('.')">.</button></td>
-            <td><button onclick="appendOperator('+')">+</button></td>
-					</tr>
-					</tr>
-				</table>
-			</form>
+				type="text"
+				id="view"
+			/><br /><br />
+
+			<table>
+				<tr>
+					<td>
+						<button
+							type="button"
+							name="btn"
+							value="1"
+							onclick="inputValue(this.value)"
+						>
+							1
+						</button>
+					</td>
+					<td>
+						<button
+							type="button"
+							name="btn"
+							value="2"
+							onclick="inputValue(this.value)"
+						>
+							2
+						</button>
+					</td>
+					<td>
+						<button
+							type="button"
+							name="btn"
+							value="3"
+							onclick="inputValue(this.value)"
+						>
+							3
+						</button>
+					</td>
+					<td>
+						<button
+							type="button"
+							name="op"
+							value="+"
+							onclick="inputValue(this.value)"
+						>
+							+
+						</button>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<button
+							type="button"
+							name="btn"
+							value="4"
+							onclick="inputValue(this.value)"
+						>
+							4
+						</button>
+					</td>
+					<td>
+						<button
+							type="button"
+							name="btn"
+							value="5"
+							onclick="inputValue(this.value)"
+						>
+							5
+						</button>
+					</td>
+					<td>
+						<button
+							type="button"
+							name="btn"
+							value="6"
+							onclick="inputValue(this.value)"
+						>
+							6
+						</button>
+					</td>
+					<td>
+						<button
+							type="button"
+							name="op"
+							value="-"
+							onclick="inputValue(this.value)"
+						>
+							-
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button
+							type="button"
+							name="btn"
+							value="7"
+							onclick="inputValue(this.value)"
+						>
+							7
+						</button>
+					</td>
+					<td>
+						<button
+							type="button"
+							name="btn"
+							value="8"
+							onclick="inputValue(this.value)"
+						>
+							8
+						</button>
+					</td>
+					<td>
+						<button
+							type="button"
+							name="btn"
+							value="9"
+							onclick="inputValue(this.value)"
+						>
+							9
+						</button>
+					</td>
+					<td>
+						<button
+							type="button"
+							name="op"
+							value="*"
+							onclick="inputValue(this.value)"
+						>
+							*
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button
+							type="button"
+							onclick="xoa();"
+						>
+							AC
+						</button>
+					</td>
+					<td>
+						<button
+							type="button"
+							name="btn"
+							onclick="inputValue(this.value)"
+						>
+							0
+						</button>
+					</td>
+					<td>
+						<button
+							name="reusult"
+							onclick="result();"
+						>
+							=
+						</button>
+					</td>
+					<td>
+						<button
+							type="button"
+							name="op"
+							value="/"
+							onclick="inputValue(this.value)"
+						>
+							/
+						</button>
+					</td>
+				</tr>
+			</table>
 		</div>
 		<!-- SCRIPT -->
 		<script src="main.js"></script>
